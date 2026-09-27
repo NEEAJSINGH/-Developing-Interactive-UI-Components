@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Accessible and responsive vanilla JavaScript FAQ accordion component.">
+  <title>Interactive FAQ Accordion</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <section class="faq-section" aria-labelledby="faq-title">
+      <div class="intro">
+        <p class="eyebrow">Interactive UI Component</p>
+        <h1 id="faq-title">Frequently Asked Questions</h1>
+        <p class="subtitle">
+          A responsive, accessible FAQ accordion built with semantic HTML,
+          CSS, and vanilla JavaScript.
+        </p>
+      </div>
+
+      <div class="accordion" id="faqAccordion">
+        <article class="faq-item">
+          <h2 class="faq-question">
+            <button class="faq-button"
+              type="button"
+              aria-expanded="false"
+              aria-controls="faq-panel-1"
+              id="faq-button-1">
+              <span>What is an interactive accordion?</span>
+              <span class="icon" aria-hidden="true">+</span>
+            </button>
+          </h2>
+          <div class="faq-panel"
+            id="faq-panel-1"
+            role="region"
+            aria-labelledby="faq-button-1"
+            hidden>
+            <div class="faq-answer">
+              <p>
+                An accordion is an interface component that lets users expand
+                and collapse related content without leaving the current page.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <h2 class="faq-question">
+            <button class="faq-button"
+              type="button"
+              aria-expanded="false"
+              aria-controls="faq-panel-2"
+              id="faq-button-2">
+              <span>Why use vanilla JavaScript?</span>
+              <span class="icon" aria-hidden="true">+</span>
+            </button>
+          </h2>
+          <div class="faq-panel"
+            id="faq-panel-2"
+            role="region"
+            aria-labelledby="faq-button-2"
+            hidden>
+            <div class="faq-answer">
+              <p>
+                Vanilla JavaScript keeps the component lightweight and shows
+                how DOM manipulation, event handling, and state management work
+                without depending on a framework.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <h2 class="faq-question">
+            <button class="faq-button"
+              type="button"
+              aria-expanded="false"
+              aria-controls="faq-panel-3"
+              id="faq-button-3">
+              <span>Is the component keyboard accessible?</span>
+              <span class="icon" aria-hidden="true">+</span>
+            </button>
+          </h2>
+          <div class="faq-panel"
+            id="faq-panel-3"
+            role="region"
+            aria-labelledby="faq-button-3"
+            hidden>
+            <div class="faq-answer">
+              <p>
+                Yes. Users can navigate between questions with Arrow Up and
+                Arrow Down, open or close a question with Enter or Space, and
+                move to the first or last question with Home or End.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <h2 class="faq-question">
+            <button class="faq-button"
+              type="button"
+              aria-expanded="false"
+              aria-controls="faq-panel-4"
+              id="faq-button-4">
+              <span>Does it work on mobile devices?</span>
+              <span class="icon" aria-hidden="true">+</span>
+            </button>
+          </h2>
+          <div class="faq-panel"
+            id="faq-panel-4"
+            role="region"
+            aria-labelledby="faq-button-4"
+            hidden>
+            <div class="faq-answer">
+              <p>
+                Yes. The layout adapts to smaller screens and maintains
+                comfortable touch targets and readable text.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <article class="faq-item">
+          <h2 class="faq-question">
+            <button class="faq-button"
+              type="button"
+              aria-expanded="false"
+              aria-controls="faq-panel-5"
+              id="faq-button-5">
+              <span>What happens if JavaScript is unavailable?</span>
+              <span class="icon" aria-hidden="true">+</span>
+            </button>
+          </h2>
+          <div class="faq-panel"
+            id="faq-panel-5"
+            role="region"
+            aria-labelledby="faq-button-5"
+            hidden>
+            <div class="faq-answer">
+              <p>
+                The component includes a graceful fallback message. The
+                content remains part of the document structure, while the
+                enhanced accordion behavior is enabled when JavaScript loads.
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <noscript>
+        <p class="noscript-message">
+          JavaScript is disabled. Please enable JavaScript to use the
+          interactive accordion controls.
+        </p>
+      </noscript>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
